@@ -1,7 +1,3 @@
-Thank you! I will now generate a README.md file for your "Machine Maintenance Center" project.
-
----
-
 # Machine Maintenance Center
 
 Welcome to the Machine Maintenance Center project! This application is built using Streamlit and features machine learning models to predict machine failure status based on various parameters. Here's a quick overview of the project:
@@ -55,5 +51,3 @@ We welcome contributions! If you have suggestions or improvements, feel free to 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
