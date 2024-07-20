@@ -1,3 +1,5 @@
+import sys
+sys.path.append(__file__.split('\\')[:-2])
 import numpy as np
 import streamlit as st
 from sklearn.base import ClassifierMixin
