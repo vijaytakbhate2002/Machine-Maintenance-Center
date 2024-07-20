@@ -1,6 +1,7 @@
 import streamlit as st
 import joblib
 import base64
+from config import config
 
 MODEL_PATH = "model_building\\models\\rfc_98.pkl"
 model = joblib.load(MODEL_PATH)
@@ -36,7 +37,14 @@ def main_web() -> None:
         """
         st.markdown(markdown_text)
 
-    with  col1.expander(label='Contact details'): 
+    with  col2.expander(label='Visuals'):
+        images = ["static\\newplot.png", "static\\newplot (1).png", "static\\newplot (2).png", "static\\newplot (3).png", "static\\newplot (4).png"]
+        st.image("static\\newplot (1).png")
+        st.image("static\\newplot (2).png")
+        st.image("static\\newplot (3).png")
+        st.image("static\\newplot (4).png")
+
+    with  col2.expander(label='Contact details'): 
         contacts_info = """
         Contacts:
         - **Name:** Vijay Dipak Takbhate
@@ -49,15 +57,8 @@ def main_web() -> None:
         """
         st.markdown(contacts_info)
 
-    with  col2.expander(label='Visuals'):
-        images = ["static\\newplot.png", "static\\newplot (1).png", "static\\newplot (2).png", "static\\newplot (3).png", "static\\newplot (4).png"]
-        st.image("static\\newplot (1).png")
-        st.image("static\\newplot (2).png")
-        st.image("static\\newplot (3).png")
-        st.image("static\\newplot (4).png")
-
-    with  col2.expander(label='Resume'):
-        pdf_file_path = "static\\Vijay_Takbhate_LaTeX.pdf"
+    with  col1.expander(label='Resume'):
+        pdf_file_path = config.RESUME
         def read_pdf_file(pdf_file_path):
             with open(pdf_file_path, "rb") as file:
                 pdf_contents = file.read()
