@@ -24,7 +24,7 @@ def collection() -> list:
     lis = [type, air_temp, process_temp, rotational_speed, torque, tool_wear]
     return lis
 
-def single_prediction(model:ClassifierMixin) -> str:
+def single_prediction(model) -> str:
     """ Args: ClassifierMixin, list
         (this function helps to predict whether machine will fail or not)
         return: None """
